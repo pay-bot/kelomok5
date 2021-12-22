@@ -77,7 +77,15 @@ INSERT INTO `indikator` (`id`, `nama`, `angka`) VALUES
 (13, 'vomiting', '0.13'),
 (14, 'abdominal pain', '0.02'),
 (15, 'cheast pain', '0.02'),
-(16, 'heamoptysis', '0.05');
+(16, 'heamoptysis', '0.05'),
+(17, 'heamoptysis', '0.05'),
+(18, 'heamoptysis', '0.05'),
+(19, 'heamoptysis', '0.05'),
+(20, 'heamoptysis', '0.05'),
+(21, 'heamoptysis', '0.05'),
+(22, 'heamoptysis', '0.05'),
+(23, 'heamoptysis', '0.05');
+
 
 -- --------------------------------------------------------
 
@@ -193,22 +201,29 @@ CREATE TABLE `pertanyaan` (
 --
 
 INSERT INTO `pertanyaan` (`pertanyaan_id`, `pil_jawaban`, `indikator_id`, `pertanyaan_konten`, `pertanyaan_created`, `pertanyaan_updated`) VALUES
-(1, '[\"1\",\"5\"]', 1, 'Apakah anda baru berpergian 14 hari terakhir ke area transmision (daerah terdampak Covid19) ?', '2020-04-15 09:51:39', '2020-04-15 02:51:39'),
-(2, '[\"1\",\"3\",\"5\"]', 2, 'Apakah anda mengalami Gejala demam?', '2020-04-15 09:51:39', '2020-04-15 02:51:39'),
-(3, '[\"1\",\"3\",\"5\"]', 3, 'Apakah anda merasa lelah?', '2020-04-15 09:52:36', '2020-04-15 02:52:36'),
-(4, '[\"1\",\"3\",\"5\"]', 4, 'Apakah anda mengalami batuk kering?', '2020-04-15 09:52:36', '2020-04-15 02:52:36'),
-(5, '[\"1\",\"3\",\"5\"]', 5, 'Apakah anda mengalami flu?', '2020-04-15 09:53:18', '2020-04-15 02:53:18'),
-(6, '[\"1\",\"3\",\"5\"]', 6, 'Apakah anda mengalami kurang nafsu makan?', '2020-04-15 09:53:18', '2020-04-15 02:53:18'),
-(7, '[\"1\",\"3\",\"5\"]', 7, 'Apakah anda mengalami nyeri otot?', '2020-04-15 09:53:56', '2020-04-15 02:53:56'),
-(8, '[\"1\",\"3\",\"5\"]', 8, 'Apakah anda mengalami sesak nafas?', '2020-04-15 09:53:56', '2020-04-15 02:53:56'),
-(9, '[\"1\",\"3\",\"5\"]', 9, 'Apakah anda mengalami nyeri ketika menelan?', '2020-04-15 10:07:47', '2020-04-15 03:07:47'),
-(10, '[\"1\",\"3\",\"5\"]', 10, 'Apakah anda mengalami diare?', '2020-04-15 10:07:47', '2020-04-15 03:07:47'),
-(11, '[\"1\",\"3\",\"5\"]', 11, ' Apakah anda merasa pusing?', '2020-04-15 10:08:47', '2020-04-15 03:08:47'),
-(12, '[\"1\",\"3\",\"5\"]', 12, 'Apakah anda mengalami sakit kepala?', '2020-04-15 10:08:47', '2020-04-15 03:08:47'),
-(13, '[\"1\",\"3\",\"5\"]', 13, 'Apakah anda menalami  muntah-muntah?', '2020-04-15 10:09:30', '2020-04-15 03:09:30'),
-(14, '[\"1\",\"3\",\"5\"]', 14, 'Apakah anda mengalami sakit perut?', '2020-04-15 10:09:30', '2020-04-15 03:09:30'),
-(15, '[\"1\",\"3\",\"5\"]', 15, 'Apakah anda mengalami nyeri pada bagian dada?', '2020-04-15 10:10:02', '2020-04-15 03:10:02'),
-(16, '[\"1\",\"3\",\"5\"]', 16, 'Apakah anda mengalami batuk berdarah?', '2020-04-15 10:10:02', '2020-04-15 03:10:02');
+(1, '[\"1\",\"3\",\"5\"]', 1, 'Apakah anda mengalami Nyeri pada daerah lambung?', '2020-04-15 09:51:39', '2020-04-15 02:51:39'),
+(2, '[\"1\",\"3\",\"5\"]', 2, 'Apakah anda mengalami rasa perih pada daerah lambung?', '2020-04-15 09:51:39', '2020-04-15 02:51:39'),
+(3, '[\"1\",\"3\",\"5\"]', 3, 'Apakah anda merasa kembung pada lambung?', '2020-04-15 09:52:36', '2020-04-15 02:52:36'),
+(4, '[\"1\",\"3\",\"5\"]', 4, 'Apakah anda merasa kurang nafsu makan?', '2020-04-15 09:52:36', '2020-04-15 02:52:36'),
+(5, '[\"1\",\"3\",\"5\"]', 5, 'Apakah anda mengalami mual atau muntah?', '2020-04-15 09:53:18', '2020-04-15 02:53:18'),
+(6, '[\"1\",\"3\",\"5\"]', 6, 'Apakah anda mengalami nyeri pada perut?', '2020-04-15 09:53:18', '2020-04-15 02:53:18'),
+(7, '[\"1\",\"3\",\"5\"]', 7, 'Apakah anda mengalami nyeri pada dada?', '2020-04-15 09:53:56', '2020-04-15 02:53:56'),
+(8, '[\"1\",\"3\",\"5\"]', 8, 'Apakah anda sering sendawa?', '2020-04-15 09:53:56', '2020-04-15 02:53:56'),
+(9, '[\"1\",\"3\",\"5\"]', 9, 'Apakah anda mengalami diare?', '2020-04-15 10:07:47', '2020-04-15 03:07:47'),
+(10, '[\"1\",\"3\",\"5\"]', 10, 'Apakah anda merasa ada penurunan berat badan?', '2020-04-15 10:07:47', '2020-04-15 03:07:47'),
+(11, '[\"1\",\"3\",\"5\"]', 11, ' Apakah fases anda berwarna hitam?', '2020-04-15 10:08:47', '2020-04-15 03:08:47'),
+(12, '[\"1\",\"3\",\"5\"]', 12, 'Apakah anda merasa nyeri terbakar pada tulang dada?', '2020-04-15 10:08:47', '2020-04-15 03:08:47'),
+(13, '[\"1\",\"3\",\"5\"]', 13, 'Apakah mulut anda terasa asam dan pahit?', '2020-04-15 10:09:30', '2020-04-15 03:09:30'),
+(14, '[\"1\",\"3\",\"5\"]', 14, 'Apakah anda merasa ada maknan atau minuman balik kemulut?', '2020-04-15 10:09:30', '2020-04-15 03:09:30'),
+(15, '[\"1\",\"3\",\"5\"]', 15, 'Apakah anda mengalami batuk menahun?', '2020-04-15 10:10:02', '2020-04-15 03:10:02'),
+(16, '[\"1\",\"3\",\"5\"]', 16, 'Apakah anda mengalami serak?', '2020-04-15 10:10:02', '2020-04-15 03:10:02'),
+(17, '[\"1\",\"3\",\"5\"]', 17, 'Apakah anda mengalami sakit tenggorokan?', '2020-04-15 10:10:02', '2020-04-15 03:10:02'),
+(18, '[\"1\",\"3\",\"5\"]', 18, 'Apakah anda mengalami asma?', '2020-04-15 10:10:02', '2020-04-15 03:10:02'),
+(19, '[\"1\",\"3\",\"5\"]', 19, 'Apakah anda mengalami demam?', '2020-04-15 10:10:02', '2020-04-15 03:10:02'),
+(20, '[\"1\",\"3\",\"5\"]', 20, 'Apakah anda mengalami kejang perut?', '2020-04-15 10:10:02', '2020-04-15 03:10:02'),
+(21, '[\"1\",\"3\",\"5\"]', 21, 'Apakah anda mengalami nyeri pada ulu hati?', '2020-04-15 10:10:02', '2020-04-15 03:10:02'),
+(22, '[\"1\",\"3\",\"5\"]', 22, 'Apakah anda sering dehidrasi?', '2020-04-15 10:10:02', '2020-04-15 03:10:02'),
+(23, '[\"1\",\"3\",\"5\"]', 23, 'Apakah anda merasa kembung pada perut?', '2020-04-15 10:10:02', '2020-04-15 03:10:02');
 
 -- --------------------------------------------------------
 
