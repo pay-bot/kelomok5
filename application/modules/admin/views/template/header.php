@@ -32,7 +32,7 @@
 <!-- Site wrapper -->
 <div class="wrapper">
 
-  <header class="main-header">
+  <header class="main-header ">
     <!-- Logo -->
     <a href="<?= base_url('admin') ?>" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
@@ -76,13 +76,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?=config_item('img_dir')?>no-photo.png" class="user-image" alt="User Image">
+              <img src="<?=config_item('img_dir')?>3.svg" class="user-image" alt="User Image">
               <span class="hidden-xs"><?= $this->nama; ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="<?=config_item('img_dir')?>no-photo.png" class="img-circle" alt="User Image">
+                <img src="<?=config_item('img_dir')?>3.svg" class="img-circle" alt="User Image">
 
                 <p>
                   <?= $this->nama.' <small>level : '.$this->level.'</small>'; ?>

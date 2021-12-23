@@ -2,7 +2,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> <?= config_item('versi'); ?>
     </div>
-    <strong>Copyright &copy; 2020 <a href="https://odp.io">Orang Dalam Pemantauan</a>.</strong> All rights
+    <strong>Copyright &copy; 2021 <a href="https://pakargerd.000webhostapp.com">Kelompok 3</a>.</strong> All rights
     reserved.
   </footer>
 

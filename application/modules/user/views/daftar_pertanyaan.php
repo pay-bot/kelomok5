@@ -29,8 +29,14 @@
 			<?php 
 			if(isset($data_imun)){ 
 				foreach($data_imun as $value_imun); ?>
-				<div class='alert alert-info' role='alert'>Persentase :  <b><?php echo $value_imun->cf_combine*100; ?> %</b></div> <?php
+				<?php if($value_imun->cf_combine*100 > 50) {
+					echo "<div class='alert alert-danger' role='alert'><b>Anda Terindikasi Penyakit Lambung, Segera periksa ke dokter</b></div>";
+				} elseif ($value_imun->cf_combine*100 < 50) {
+					echo "<div class='alert alert-info' role='alert'><b>Anda Tidak Terindikasi Penyakit Lambung, Namun anda harus tetap berkonsultasi ke dokter.</b></div>";
+				} ?> 
+				 <?php
 			} ?>
+			
 				<form role="form" action="<?=site_url('user/konsultasis/save_jawaban'); ?>" method="post">
 					<div class="box-body">
 						<input type="hidden" name="user_id" value="<?php echo $this->session->userdata('userid'); ?>"><?php 
@@ -41,7 +47,7 @@
 						$no=1;
 						foreach ($soal as $key => $val) { ?>
 							<div class="form-group">
-								<label for="" class="col-sm-12 control-label"><?= $no.'. '.$val['pertanyaan_konten']; ?> </label>
+								<label for="" class="col-sm-12 alert alert-success" style="margin-bottom: -6px;"><?= $no.'. '.$val['pertanyaan_konten']; ?> </label>
 								<div class="col-sm-3">
 									<input type="hidden" class="form-control" value="<?= $val['pertanyaan_id']; ?>"><?php 
 									$pil_jawaban = json_decode($val['pil_jawaban'], true); ?> <?php
